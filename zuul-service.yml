@@ -8,3 +8,11 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
+zuul:
+  routes :
+    picture-service :
+      path : /picture/**
+      serviceId : picture-service
+
+#zuul.routes.orderservice.path=/orders/**
+#zuul.routes.orderservice.serviceId=order-service
