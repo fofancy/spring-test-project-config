@@ -1,0 +1,45 @@
+spring:
+  data:
+    rest: basePath=/api
+  #
+  #spring.datasource.driverClassName=org.h2.Driver
+  #spring.datasource.url=jdbc:h2:mem:test-task
+  #spring.datasource.platform=h2
+  #spring.datasource.username=admin
+  #spring.datasource.password=admin
+  #spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+  # create and drop tables and sequences, loads import.sql
+  jpa:
+    hibernate.ddl-auto: create-drop
+    #hibernate config
+    database-platform : org.hibernate.dialect.H2Dialect
+      ###
+    #   Hibernate Settings
+    ###
+    generate-ddl : true
+    spring.jpa.show-sql : true
+
+  # Oracle settings
+  datasource :
+    url : jdbc:h2:mem:example-app
+    username : system
+    password : naka3naya
+    driver-class-name : org.h2.Driver
+
+  servlet :
+    multipart:
+      max-file-size : 10MB
+      max-request-size: 10MB
+
+server:
+  port: ${PORT:0}
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
