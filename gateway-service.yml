@@ -21,6 +21,11 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 60000
-
+            
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  eureka:
+    enabled: true
 #zuul.routes.orderservice.path=/orders/**
 #zuul.routes.orderservice.serviceId=order-service
