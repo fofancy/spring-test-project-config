@@ -10,7 +10,7 @@ eureka:
       defaultZone: http://localhost:8061/eureka/
 zuul:
   routes :
-    picture-service :
+    pictures-service :
       path : /picture/**
       serviceId : pictures-service
 
