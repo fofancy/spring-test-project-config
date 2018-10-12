@@ -13,6 +13,15 @@ zuul:
     pictures-service :
       path : /picture/**
       serviceId : pictures-service
+      
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 60000
 
 #zuul.routes.orderservice.path=/orders/**
 #zuul.routes.orderservice.serviceId=order-service
