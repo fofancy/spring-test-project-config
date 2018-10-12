@@ -12,7 +12,7 @@ zuul:
   routes :
     picture-service :
       path : /picture/**
-      serviceId : picture-service
+      serviceId : pictures-service
 
 #zuul.routes.orderservice.path=/orders/**
 #zuul.routes.orderservice.serviceId=order-service
