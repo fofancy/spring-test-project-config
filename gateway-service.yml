@@ -13,6 +13,7 @@ zuul:
     pictures-service :
       path : /picture/**
       serviceId : pictures-service
+      stripPrefix: true
       
 hystrix:
   command:
@@ -34,6 +35,6 @@ management:
   endpoints:
     web:
       exposure:
-        include: *
+        include: routes,filters
 #zuul.routes.orderservice.path=/orders/**
 #zuul.routes.orderservice.serviceId=order-service
