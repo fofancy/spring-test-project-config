@@ -13,7 +13,7 @@ zuul:
     pictures-service :
       path : /pictures/**
       serviceId : pictures-service
-      stripPrefix: true
+      stripPrefix: false
       
 hystrix:
   command:
