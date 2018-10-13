@@ -34,6 +34,6 @@ management:
   endpoints:
     web:
       exposure:
-        include:*
+        include: *
 #zuul.routes.orderservice.path=/orders/**
 #zuul.routes.orderservice.serviceId=order-service
