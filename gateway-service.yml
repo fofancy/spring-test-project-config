@@ -11,7 +11,7 @@ eureka:
 zuul:
   routes :
     pictures-service :
-      path : /picture/**
+      path : /pictures/**
       serviceId : pictures-service
       stripPrefix: true
       
