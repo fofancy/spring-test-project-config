@@ -9,6 +9,8 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8061/eureka/
 zuul:
+  prefix : /api
+  stripPrefix: true
   routes :
     pictures-service :
       path : /pictures/**
