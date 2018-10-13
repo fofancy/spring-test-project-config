@@ -25,6 +25,8 @@ hystrix:
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 60000
+  listOfServers: localhost:8080
+  ServerListRefreshInterval: 15000
   eureka:
     enabled: true
 #zuul.routes.orderservice.path=/orders/**
