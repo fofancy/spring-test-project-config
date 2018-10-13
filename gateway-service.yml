@@ -26,8 +26,6 @@ hystrix:
 ribbon:
   ReadTimeout: 80000
   ConnectTimeout: 80000
-  listOfServers: localhost:8080
-  ServerListRefreshInterval: 15000
   eureka:
     enabled: true
     
