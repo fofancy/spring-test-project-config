@@ -11,9 +11,9 @@ eureka:
 zuul:
   routes :
     pictures-service :
-      path : /**
+      path : /pictures/**
       serviceId : pictures-service
-      stripPrefix: false
+      stripPrefix: true
       
 hystrix:
   command:
