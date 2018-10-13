@@ -20,11 +20,11 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 60000
+            timeoutInMilliseconds: 80000
             
 ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
+  ReadTimeout: 80000
+  ConnectTimeout: 80000
   listOfServers: localhost:8080
   ServerListRefreshInterval: 15000
   eureka:
