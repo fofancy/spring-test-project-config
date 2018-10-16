@@ -34,12 +34,14 @@ spring:
       max-request-size: 10MB
 
 server:
-  port: ${PORT:0}
+  port: 9090
 
 
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://discovery:8061/eureka/
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    hostname: localhost
