@@ -44,4 +44,4 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery:8061/eureka/
   instance:
-    hostname: localhost
+    hostname: pictures
